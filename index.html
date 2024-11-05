@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header><!--cabeçalho c logo-->
+    <div id="logo-escola">
+        <img src="logo_escola_mundial_1.jpg" alt="img-escola">
+    </div>
+    <h1> Cadastro </h1>
+</header>
+
+  <!--informaçao basica aluno-->
+    <section id="formulario">
+            <h2>Aluno</h2>
+            <label>Nome</label>
+            <input id="nomeAluno" type="text" placeholder="Digite o nome do aluno:">
+            <label>Turma</label>
+            <input id="turmaAluno" type="text"placeholder="Digite a turma:"> 
+            <label for="idadeAluno">Idade</label>
+            <input id="idadeAluno" type="number" placeholder="Digite a idade do aluno:">
+        <!--fim informaçao basica-->
+    </section>
+
+        
+        
+<div id="botao">
+            <button id="cadastrarbotao">Cadastrar</button>
+        </div>
+
+ <section id="saida">
+  <label>Nome: <span class="span"></span></label>
+  <label>Turma: <span class="span"></span></label> 
+<label>Idade: <span class="span"></span></label>
+          
+        
+<div id="resultado"></div>        
+ </section>
+ <script src="script.js"></script>
+</body>
+</html>
