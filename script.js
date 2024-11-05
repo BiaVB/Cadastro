@@ -18,19 +18,27 @@ class Aluno {
           }
         }
 
-        button.addEventListener("click", () => {
-
-      const nome = document.getElementById("nomeAluno").value;
+let alunosCadastrados = []; // Array para armazenar os alunos cadastrados
+     
+button.addEventListener("click", () => {
+ const nome = document.getElementById("nomeAluno").value;
    const turma = document.getElementById("turmaAluno").value;
     const idade = document.getElementById("idadeAluno").value;
   
             const alunoNV = new Aluno(nome,turma,idade);
-            
-            alunoNV.exibirAluno();
-          
+            //apagar embaixo
+            alunosCadastrados.push(alunoNV); 
            
+            alunoNV.exibirAluno();
 
-//excluir if e else se der merda
+            
+// Limpar os campos de input após adicionar o aluno
+  document.getElementById("nomeAluno").value = "";
+  document.getElementById("turmaAluno").value = "";
+  document.getElementById("idadeAluno").value = "";
+
+
+
     const resultadoDiv = document.getElementById("resultado");
  
     resultadoDiv.innerHTML = "";
@@ -39,8 +47,21 @@ class Aluno {
     }
     
 
-    //excluir se der merda
-   
-});      
 
+   
+     
+
+//apgar
+ // Exibir a lista de alunos cadastrados
+ const listaDiv = document.getElementById("listaAlunos");
+ listaDiv.innerHTML = ""; // Limpa a lista antes de adicionar os alunos
+ alunosCadastrados.forEach((aluno, index) => {
+   const alunoItem = document.createElement("p");
+   alunoItem.textContent = `${index + 1}. ${aluno.nome} - ${aluno.turma} - ${aluno.idade} anos`;
+   listaDiv.appendChild(alunoItem);
+ });
+});
+
+
+// EDITAR INFO
 
