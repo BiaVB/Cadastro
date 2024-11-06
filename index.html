@@ -22,7 +22,7 @@
             <label>Nome</label>
             <input id="nomeAluno" type="text" placeholder="Digite o nome do aluno:">
             <label>Turma</label>
-            <input id="turmaAluno" type="text"placeholder="Digite a turma:"> 
+            <input id="turmaAluno" type="text"placeholder="Digite a turma:" pattern="[A-Za-z]" maxlength= "1"> 
             <label for="idadeAluno">Idade</label>
             <input id="idadeAluno" type="number" placeholder="Digite a idade do aluno:">
         <!--fim informaçao basica-->
@@ -35,11 +35,10 @@
         </div>
 
  <section id="saida">
-  <label>Nome: <span class="span"></span></label>
-  <label>Turma: <span class="span"></span></label> 
-<label>Idade: <span class="span"></span></label>
-          
-        
+  <label><span class="span"></span></label>
+  <label> <span class="span"></span></label> 
+<label> <span class="span"></span></label>      
+    
 <div id="resultado"></div>        
  </section>
 
@@ -47,10 +46,6 @@
  <h3>Alunos Cadastrados:</h3>
  <div id="listaAlunos"> <!-- Aqui serão listados os alunos cadastrados -->
   </div>
-
-  <div class="aluno">
-    <button>Remover</button>
-</div>
 
  <script src="script.js"></script>
 </body>
